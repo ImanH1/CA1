@@ -1,0 +1,39 @@
+feb. 21, 2016 1:39:54 AM Server.Server startServer
+INFO: Sever started. Listening on: 9090, bound to: localhost
+feb. 21, 2016 1:40:14 AM Server.Server startServer
+INFO: Client is connected!
+feb. 21, 2016 1:40:14 AM Server.ClientController sendMessage
+INFO: Received Message: USERLIST#ANONYMOUS
+feb. 21, 2016 1:40:14 AM Server.ClientController run
+INFO: Received Message: USER#MISSMERNS
+feb. 21, 2016 1:40:14 AM Server.ClientController sendMessage
+INFO: Received Message: USERLIST#MISSMERNS
+feb. 21, 2016 1:40:55 AM Server.Server startServer
+INFO: Client is connected!
+feb. 21, 2016 1:40:55 AM Server.ClientController sendMessage
+INFO: Received Message: USERLIST#MISSMERNS,ANONYMOUS
+feb. 21, 2016 1:40:55 AM Server.ClientController sendMessage
+INFO: Received Message: USERLIST#MISSMERNS,ANONYMOUS
+feb. 21, 2016 1:40:55 AM Server.ClientController run
+INFO: Received Message: USER#IMAN 
+feb. 21, 2016 1:40:55 AM Server.ClientController sendMessage
+INFO: Received Message: USERLIST#MISSMERNS,IMAN 
+feb. 21, 2016 1:40:55 AM Server.ClientController sendMessage
+INFO: Received Message: USERLIST#MISSMERNS,IMAN 
+feb. 21, 2016 1:40:59 AM Server.ClientController sendMessage
+INFO: Received Message: MESSAGE#IMAN #HEJ MISSMERNS
+feb. 21, 2016 1:40:59 AM Server.ClientController sendMessage
+INFO: Received Message: MESSAGE#IMAN #HEJ MISSMERNS
+feb. 21, 2016 1:41:09 AM Server.ClientController sendMessage
+INFO: Received Message: MESSAGE#MISSMERNS#HEJ
+feb. 21, 2016 1:41:09 AM Server.ClientController sendMessage
+INFO: Received Message: MESSAGE#MISSMERNS#HEJ
+feb. 21, 2016 1:41:10 AM Server.ClientController run
+SEVERE: null
+java.lang.ArrayIndexOutOfBoundsException: 2
+	at Server.ClientController.run(ClientController.java:75)
+
+feb. 21, 2016 1:41:23 AM Server.ClientController sendMessage
+INFO: Received Message: USERLIST#MISSMERNS
+feb. 21, 2016 1:41:23 AM Server.ClientController run
+INFO: A Connection Closed!

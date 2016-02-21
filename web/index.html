@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Dokumentation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            
+            <div class="jumbotron">
+                <h1>CA1 - Dokumentation</h1>
+            </div>
+            
+            <div class ="row">
+                
+                <div class="col-sm-10">
+                    <fieldset>
+                    <h3><strong>Design</strong></h3>
+                    <br>
+                    
+                    <h4> Transmission Control Protocol</h4>
+                    <p> i vores program har vi transmission control protocol, som også kan forkortes til TCP. </p>
+                    <ul>
+                        <li><p>TCP er en "pålidelig" protokol, med andre ord, det garanterer levering af data den sender i form af "pakker."</p></li>
+                        <li><p>Hvis pakkerne bliver tabt eller beskadiget, vil TCP gensende dataen, indtil det bekræfter, at pakkerne er blevet overført.</p></li>
+                        <li><p>TCP skal være der i Applicationer, som pålideligt skal sende beskeder frem og tilbage.</p></li>
+                    </ul>
+                    <br>
+                    
+                    <h4>TCP/IP Sockets</h4>
+                    <p>Når forbindelsen er blevet skabt, har Client og Server begge en binding til hver deres sockets,i deres forbindelse.
+                       Når en forbindelse er etableret kan Client og Server både læse fra og skrive  "socket" når der kommunikeres.</p>
+                    <br>
+                    
+                    <h4>Client-Server Application</h4>
+                    <ol>
+                        <li><p>Opret en Socket og ServerSocket objekt og åben det over en specificeret "port" og "ip" adresse eller hostsnavn. Eksempel - "localhost", 9090</p></li>
+                        <li><p>Instantiere "InputStreamReader, BufferedReader og PrintStream" objekter til at tilsætte data til og fra hver socket.</p></li>
+                        <li><p> læse og skrive fra stream mellem  sockets ved at bruge det aftalte protocol.</p></li>
+                        <li><p>lukke  input og output streams</p></li>
+                        <li><p>lukke  Sockets eller ServerSocket objects.</p></li>
+                    </ol>
+                    <br>
+                    
+                    <h4>State Behaviour</h4>
+                    <p>den "Server" som er skabt af ServerSocket object og åben den over en  specifik "port" og "ip" 
+                                addresse eller host navn,  "localhost", 9090.  clienten opretter en socket, og når 
+                            en forbindelse mellem  sockets er blevet skabt, vil clienten og server begge læse fra og
+                            skrive til socketen. Serveren kalder the "accept()" method og skaber en ny Thread for clienten.
+                            når  "Terminalen" bliver brugt på Mac eller "Command Prompt" på Windows, det første du skal gøre er 
+                            bruge protocol tag - "USER#name", til at skabe en user. når en user er blevet skabt, vil "USERLIST#"
+                            blive tilgængelig med alle online/connected users. Alle online/connected clients vil modtage 
+                            listen. kommunication mellem clients, er  lavet gennem den aftalte procotol - "MESSAGE#receiver#msg".
+                            </p>
+                    <br>
+                    
+                    <h4>Observer Design Pattern</h4>
+                    <p>vi  har implementeret  Observer design pattern. The Observer design pattern definerer en one-to-many
+                    dependency mellem objects så at når en object ændre tilstand, will alle dens dependents være notified
+                    og automatisk updated. Observer design pattern falder under "behavioral pattern" katagory.
+                    vores "GUI" class implementere observer, med en abstract method "update()" implemented.  
+                    "Clienten" class extends "Observable", og hvergang vi får en message, vil "notfiy()" method blive kaldt  
+                    .  "notify()" method notifieciere til alle the observers. </p>
+                    
+                    
+                    <br>
+                    
+                    <h4><strong> Test</strong></h4>
+                    <p> den 1 tester client server om den kommer igennem. Den starter bare server og lukker den efter
+                     den næste test ser om man får besked. Besked fra ny client der blivet opretter.
+                     først opretter man en client bagefter kigger om der kommer nogen besked, når man skriver #userlist før beskeden
+                     den 3 tester alle prøver send besked alle der online.
+                     den 3 sidste tjekker om der kommer clienter ned i listen når man opretter</p>
+                    </br>
+                    
+                    
+                    
+                </div>
+                
+               
+                
+                
+                <div class="col-sm-10">
+                    <h3><strong>hvem lavede hvad?</strong></h3>
+
+                    <ul>
+                        <li><p><strong>Client.java</strong> - junes & iman</p></li>
+                        <li><p><strong>ClientController.java</strong> - junes & iman</p></li>
+                        <li><p><strong>GUI.java</strong> - Iman</p></li>
+                        <li><p><strong>Protocol.java</strong> - Junes</p></li>
+                        <li><p><strong>Server.java</strong> - junes & iman</p></li>
+                        <li><p><strong>ClientTest.java</strong> - junes & iman</p></li>
+                        <li><p><strong>Utils.java</strong> - junes</p></li>
+                        <li><p><strong>Main.html</strong> - iman</p></li>
+                        <li><p><strong>Documentation.html</strong> - iman & junes</p></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="col-sm-10">
+                    <h3><strong>GitHub</strong></h3>
+                    <a href=""> Github</a>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
